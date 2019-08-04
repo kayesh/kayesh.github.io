@@ -1,28 +1,47 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Hank Quinlan, Horrible Cop</title>
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Hank Quinlan!</h1>
-				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-			</ul>
-		</footer>
-	</body>
-</html>
+---
+layout: default
+---
+
+<section id="header" class="theme-blue element">
+    {% include header.html %}
+</section>
+
+<section id="contacts-bar" >
+
+    {% include nav.html class="justify-content-center" links = site.data.contact-links type="contacts-bar" %}
+
+</section>
+
+
+<section id="navigation-bar" >
+
+    {% include nav.html class="justify-content-center" links = site.data.links type="navbar" %}
+
+</section>
+
+
+<section id="experiences"  class="section";>
+    {% include experiences.html experiences=site.data.experiences %}
+</section>
+
+<section id="skills" class="section" >
+    {% include skills.html skills=site.data.skills %}
+</section>
+
+<section id="portfolio" class="section" >
+
+    {% include portfolio.html items=site.data.portfolio.data %}
+
+</section>
+
+<section id="education" class="section">
+    {% include education.html %}
+</section>
+
+<section id="contact" class="section">
+    {% include contact.html %}
+</section>
+
+<section id="footer" class="section">
+    {% include footer.html %}
+</section>
